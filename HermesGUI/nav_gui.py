@@ -29,10 +29,10 @@ def initialize_textures():
 
 def setRobotPosition(target_x,target_y,target_a,actual_x,actual_y,actual_a):
     #move and rotate robot images
-    dpg.apply_transform('robot_actual', dpg.create_translation_matrix([(5*actual_y)+360,actual_x+360]))#
-    set_rotation(robotActualImg, "robot_actual_image", actual_a)
-    dpg.apply_transform('robot_target', dpg.create_translation_matrix([(5*target_y)+360,target_x+360]))#
-    set_rotation(robotTargetImg, "robot_target_image", target_a)
+    dpg.apply_transform('robot_actual', dpg.create_translation_matrix([((5*actual_y)+360),(-5*actual_x+360)]))#
+    set_rotation(robotActualImg, "robot_actual_image", -actual_a)
+    dpg.apply_transform('robot_target', dpg.create_translation_matrix([((5*target_y)+360),(-5*target_x+360)]))#
+    set_rotation(robotTargetImg, "robot_target_image", -target_a)
     #move velocity lines
     act_vel_x = 60
     act_vel_y = 60
